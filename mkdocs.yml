@@ -1,0 +1,5 @@
+site_name: TIANPENGWIKI
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
