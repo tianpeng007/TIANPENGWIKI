@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Orcl - TIANPENGWIKI</title>
+  <title>ORCL安装流程 - TIANPENGWIKI</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Orcl";
+    var mkdocs_page_name = "ORCL\u5b89\u88c5\u6d41\u7a0b";
     var mkdocs_page_input_path = "ORCL\\orcl.md";
     var mkdocs_page_url = null;
   </script>
@@ -26,8 +26,6 @@
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
   <script src="../../js/modernizr-2.8.3.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -55,12 +53,12 @@
                 </ul>
                 <p class="caption"><span class="caption-text">NAVICAT</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../NAVICAT/navicat%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/">错误码问题汇总</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../NAVICAT/navicat%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/">navicat错误码</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">ORCL</span></p>
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Orcl</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">ORCL安装流程</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#_1">安装准备</a>
     </li>
@@ -122,7 +120,7 @@
         
       
     
-    <li>Orcl</li>
+    <li>ORCL安装流程</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -133,14 +131,14 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="orcl">ORCL安装流程<a class="headerlink" href="#orcl" title="Permanent link">&para;</a></h1>
+                <h1 id="orcl">ORCL安装流程</h1>
 <hr />
-<h2 id="_1">安装准备<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="linenums">安装前先安装netformwork3.5----用到系统镜像文件</code></pre>
+<h2 id="_1">安装准备</h2>
+<pre class="codehilite"><code>安装前先安装netformwork3.5----用到系统镜像文件</code></pre>
 
 
-<h2 id="navicat">navicat连接问题<a class="headerlink" href="#navicat" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="linenums">连接时如果出现连接Oracle时报错ORA-28547，，更换最新的ocr.dll文件
+<h2 id="navicat">navicat连接问题</h2>
+<pre class="codehilite"><code>连接时如果出现连接Oracle时报错ORA-28547，，更换最新的ocr.dll文件
 
 ##证书问题
 先添加网站为信任
@@ -148,15 +146,15 @@
 certutil -setreg chain\EnableWeakSignatureFlags 8</code></pre>
 
 
-<h2 id="_2">安装过程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="linenums">1.选择安装服务器类
+<h2 id="_2">安装过程</h2>
+<pre class="codehilite"><code>1.选择安装服务器类
 2.选择单实例数据库
 3.数据库密码必须为字母开头
 4.字符集选择utf-8</code></pre>
 
 
-<h2 id="_3">创建表空间<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="linenums">    create tablespace ITSM_DONGFANG  
+<h2 id="_3">创建表空间</h2>
+<pre class="codehilite"><code>    create tablespace ITSM_DONGFANG  
     #“ITSM_DONGFANG”是用户名称命名的表空间
     logging
     datafile 'F:\app\Administrator\oradata\orcl\ITSM_DONGFANG.dbf'  
@@ -167,7 +165,7 @@ certutil -setreg chain\EnableWeakSignatureFlags 8</code></pre>
     extent management local;</code></pre>
 
 
-<h2 id="_4">创建用户<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_4">创建用户</h2>
 <ul>
 <li><code>SQLPLUS /NOLOG</code></li>
 <li><code>CONN /AS SYSDBA</code></li>
@@ -176,8 +174,8 @@ certutil -setreg chain\EnableWeakSignatureFlags 8</code></pre>
 <li><code>GRANT CREATE SESSION,CREATE TABLE,CREATE VIEW,CREATE SEQUENCE,UNLIMITED TABLESPACE TO ITSM_DONGFANG;</code></li>
 <li><code>ALTER USER ITSM_DONGFANG ACCOUNT UNLOCK;</code></li>
 </ul>
-<h2 id="_5">创建/授权/删除角色<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="linenums">除了前面讲到的三种系统角色----connect、resource和dba，用户还可以在oracle创建自己的role。用户创建的role可以由表或系统权限或两者的组合构成。为了创建role，用户必须具有create role系统权限。
+<h2 id="_5">创建/授权/删除角色</h2>
+<pre class="codehilite"><code>除了前面讲到的三种系统角色----connect、resource和dba，用户还可以在oracle创建自己的role。用户创建的role可以由表或系统权限或两者的组合构成。为了创建role，用户必须具有create role系统权限。
 
 1》创建角色
 语法： create role 角色名;
@@ -207,25 +205,25 @@ certutil -setreg chain\EnableWeakSignatureFlags 8</code></pre>
 　　我们将从创建Oracle用户权限表开始谈起，然后讲解登陆等一般性动作，使大家对Oracle用户权限表有个深入的了解。</code></pre>
 
 
-<h3 id="_6">一、创建<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="linenums">　　sys;//系统管理员，拥有最高权限
+<h3 id="_6">一、创建</h3>
+<pre class="codehilite"><code>　　sys;//系统管理员，拥有最高权限
 　　system;//本地管理员，次高权限
 　　scott;//普通用户，密码默认为tiger,默认未解锁</code></pre>
 
 
-<h3 id="_7">二、登陆<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="linenums">　　sqlplus / as sysdba;//登陆sys帐户
+<h3 id="_7">二、登陆</h3>
+<pre class="codehilite"><code>　　sqlplus / as sysdba;//登陆sys帐户
 　　sqlplus sys as sysdba;//同上
 　　sqlplus scott/tiger;//登陆普通用户scott</code></pre>
 
 
-<h3 id="_8">三、管理用户<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="linenums">　　create user zhangsan;//在管理员帐户下，创建用户zhangsan
+<h3 id="_8">三、管理用户</h3>
+<pre class="codehilite"><code>　　create user zhangsan;//在管理员帐户下，创建用户zhangsan
 　　alert user scott identified by tiger;//修改密码</code></pre>
 
 
-<h3 id="_9">四，授予权限<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="linenums">　　1、默认的普通用户scott默认未解锁，不能进行那个使用，新建的用户也没有任何权限，必须授予权限
+<h3 id="_9">四，授予权限</h3>
+<pre class="codehilite"><code>　　1、默认的普通用户scott默认未解锁，不能进行那个使用，新建的用户也没有任何权限，必须授予权限
 　　
 　　grant create session to zhangsan;//授予zhangsan用户创建session的权限，即登陆权限
 　　grant unlimited tablespace to zhangsan;//授予zhangsan用户使用表空间的权限
@@ -245,25 +243,25 @@ certutil -setreg chain\EnableWeakSignatureFlags 8</code></pre>
 　　grant alert all table to zhangsan;//授予zhangsan用户alert任意表的权限</code></pre>
 
 
-<h3 id="_10">五、撤销权限<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h3 id="_10">五、撤销权限</h3>
 <p>基本语法同grant,关键字为revoke</p>
-<h3 id="_11">六、查看权限<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="linenums">　　select * from user_sys_privs;//查看当前用户所有权限
+<h3 id="_11">六、查看权限</h3>
+<pre class="codehilite"><code>　　select * from user_sys_privs;//查看当前用户所有权限
 　　select * from user_tab_privs;//查看所用用户对表的权限</code></pre>
 
 
-<h3 id="_12">七、操作表的用户的表<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="linenums">　　select * from zhangsan.tablename</code></pre>
+<h3 id="_12">七、操作表的用户的表</h3>
+<pre class="codehilite"><code>　　select * from zhangsan.tablename</code></pre>
 
 
-<h3 id="_13">八、权限传递<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="linenums">　　即用户A将权限授予B，B可以将操作的权限再授予C，命令如下：
+<h3 id="_13">八、权限传递</h3>
+<pre class="codehilite"><code>　　即用户A将权限授予B，B可以将操作的权限再授予C，命令如下：
 　　grant alert table on tablename to zhangsan with admin option;//关键字 with admin option
 　　grant alert table on tablename to zhangsan with grant option;//关键字 with grant option效果和admin类似</code></pre>
 
 
-<h3 id="_14">九、角色<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="linenums">　　角色即权限的集合，可以把一个角色授予给用户
+<h3 id="_14">九、角色</h3>
+<pre class="codehilite"><code>　　角色即权限的集合，可以把一个角色授予给用户
 　　create role myrole;//创建角色
 　　grant create session to myrole;//将创建session的权限授予myrole
 　　grant myrole to zhangsan;//授予zhangsan用户myrole的角色
@@ -276,7 +274,7 @@ certutil -setreg chain\EnableWeakSignatureFlags 8</code></pre>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../../NAVICAT/navicat%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" class="btn btn-neutral" title="错误码问题汇总"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../NAVICAT/navicat%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" class="btn btn-neutral" title="navicat错误码"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   

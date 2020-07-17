@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>错误码问题汇总 - TIANPENGWIKI</title>
+  <title>navicat错误码 - TIANPENGWIKI</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u9519\u8bef\u7801\u95ee\u9898\u6c47\u603b";
+    var mkdocs_page_name = "navicat\u9519\u8bef\u7801";
     var mkdocs_page_input_path = "NAVICAT\\navicat\u7f16\u7801\u95ee\u9898.md";
     var mkdocs_page_url = null;
   </script>
@@ -26,8 +26,6 @@
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
   <script src="../../js/modernizr-2.8.3.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -55,7 +53,7 @@
                 </ul>
                 <p class="caption"><span class="caption-text">NAVICAT</span></p>
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">错误码问题汇总</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">navicat错误码</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#mysqlnavicat1251">解决mysql与navicat建立连接出现1251错误</a>
     </li>
@@ -64,7 +62,7 @@
                 </ul>
                 <p class="caption"><span class="caption-text">ORCL</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../ORCL/orcl/">Orcl</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ORCL/orcl/">ORCL安装流程</a>
                     </li>
                 </ul>
       </div>
@@ -92,7 +90,7 @@
         
       
     
-    <li>错误码问题汇总</li>
+    <li>navicat错误码</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -103,8 +101,8 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="_1">错误码问题汇总<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="mysqlnavicat1251">解决mysql与navicat建立连接出现1251错误<a class="headerlink" href="#mysqlnavicat1251" title="Permanent link">&para;</a></h2>
+                <h1 id="navicat">navicat错误码</h1>
+<h2 id="mysqlnavicat1251">解决mysql与navicat建立连接出现1251错误</h2>
 <p>在本篇文章里小编给大家整理了一篇关于mysql与navicat建立连接出现1251错误怎么解决的技术文章，需要的朋友们参考下。
 重装了电脑，安装了最新版的MySQL数据库，结果Navicat连接Mysql报1251错误，sqlyog报2058错误，但是window命令进入mysql，账号密码都是正确的。</p>
 <p>在网上查的是，出现这个原因是mysql8之前的版本中加密规则是mysql_native_password，而在mysql8之后，加密规则是caching_sha2_password。
@@ -112,13 +110,13 @@
 <p>一种是升级navicat驱动；   </p>
 <p>一种是把mysql用户登录密码加密规则还原成mysql_native_password。<br />
 我常用的是第二种方式：</p>
-<pre class="codehilite"><code class="linenums">ALTER USER 'root'@'%' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER; #更新一下用户的密码 
+<pre class="codehilite"><code>ALTER USER 'root'@'%' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER; #更新一下用户的密码 
 
 
 FLUSH PRIVILEGES; #刷新权限</code></pre>
 
 
-<pre class="codehilite"><code class="linenums">docker run -p 3306:3306 --name mysql -v /opt/docker_v/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=123456 -d imageID</code></pre>
+<pre class="codehilite"><code>docker run -p 3306:3306 --name mysql -v /opt/docker_v/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=123456 -d imageID</code></pre>
 
 
 <p>我看好多人拿着命令直接复制，这样是不对的。
@@ -132,7 +130,7 @@ FLUSH PRIVILEGES; #刷新权限</code></pre>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../ORCL/orcl/" class="btn btn-neutral float-right" title="Orcl">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../ORCL/orcl/" class="btn btn-neutral float-right" title="ORCL安装流程">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
