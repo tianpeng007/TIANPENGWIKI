@@ -4,26 +4,26 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>TIANPENGWIKI</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>appscan安装流程 - TIANPENGWIKI</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">TIANPENGWIKI</a>
+                <a class="navbar-brand" href="../..">TIANPENGWIKI</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -33,15 +33,15 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem active">
-                                <a href="." class="nav-link">Welcome to MkDocs</a>
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Welcome to MkDocs</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Appscan <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="appscan/appscan%E5%AE%89%E8%A3%85/" class="dropdown-item">appscan安装流程</a>
+    <a href="./" class="dropdown-item active">appscan安装流程</a>
 </li>
                                 </ul>
                             </li>
@@ -50,7 +50,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="navicat/navicat%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" class="dropdown-item">navicat错误码</a>
+    <a href="../../navicat/navicat%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" class="dropdown-item">navicat错误码</a>
 </li>
                                 </ul>
                             </li>
@@ -59,7 +59,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="orcl/orcl/" class="dropdown-item">Orcl</a>
+    <a href="../../orcl/orcl/" class="dropdown-item">Orcl</a>
 </li>
                                 </ul>
                             </li>
@@ -72,12 +72,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href="../.." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="appscan/appscan%E5%AE%89%E8%A3%85/" class="nav-link">
+                                <a rel="next" href="../../navicat/navicat%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -99,13 +99,9 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#welcome-to-mkdocs" class="nav-link">Welcome to MkDocs</a>
+            <li class="nav-item" data-level="1"><a href="#appscan" class="nav-link">appscan安装流程</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#commands" class="nav-link">Commands</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
+            <li class="nav-item" data-level="2"><a href="#1251" class="nav-link">1251错误码</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -116,23 +112,28 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre class="codehilite"><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.</code></pre>
+<h1 id="appscan">appscan安装流程</h1>
+<h2 id="1251">1251错误码</h2>
+<p>在本篇文章里小编给大家整理了一篇关于mysql与navicat建立连接出现1251错误怎么解决的技术文章，需要的朋友们参考下。
+重装了电脑，安装了最新版的MySQL数据库，结果Navicat连接Mysql报1251错误，sqlyog报2058错误，但是window命令进入mysql，账号密码都是正确的。</p>
+<p>在网上查的是，出现这个原因是mysql8之前的版本中加密规则是mysql_native_password，而在mysql8之后，加密规则是caching_sha2_password。
+*解决问题方法有两种，  </p>
+<p>一种是升级navicat驱动；   </p>
+<p>一种是把mysql用户登录密码加密规则还原成mysql_native_password。<br />
+我常用的是第二种方式：</p>
+<pre class="codehilite"><code>ALTER USER 'root'@'%' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER; #更新一下用户的密码 
 
 
-<p><img alt="egg" src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1594969323688&amp;di=07435d8593b498b0feb95fa4538b5c5e&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201510%2F21%2F20151021194320_nYecA.thumb.400_0.gif" /></p></div>
+FLUSH PRIVILEGES; #刷新权限</code></pre>
+
+
+<pre class="codehilite"><code>docker run -p 3306:3306 --name mysql -v /opt/docker_v/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=123456 -d imageID</code></pre>
+
+
+<p>我看好多人拿着命令直接复制，这样是不对的。
+'root' 为你自己定义的用户名
+'localhost' 指的是用户开放的IP，可以是'localhost'(仅本机访问，相当于127.0.0.1)，可以是具体的'<em>.</em>.<em>.</em>'(具体某一IP)，也可以是 '%' (所有IP均可访问)
+'password' 是你想使用的用户密码</p></div>
             </div>
         </div>
 
@@ -141,11 +142,11 @@ docs/
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -213,8 +214,3 @@ docs/
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.1.2
-Build Date UTC : 2020-07-17 07:55:40.667739+00:00
--->
